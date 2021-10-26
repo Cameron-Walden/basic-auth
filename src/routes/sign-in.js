@@ -10,7 +10,6 @@ const { User } = require('../models/index.js')
 const router = express.Router();
 
 router.post('/signin', basicAuth, signIn);
-// router.post('/signin', authorizationRoute, signIn);
 
 async function signIn(request, response) {
   try {
