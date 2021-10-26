@@ -1,7 +1,7 @@
 'use strict';
 
 const bcrypt = require('bcrypt');
-const { user } = require('osenv');
+
 const sequelize = require('sequelize');
 
 // const User = sequelize.define('users', {
