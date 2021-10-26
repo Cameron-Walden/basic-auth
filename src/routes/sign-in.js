@@ -4,13 +4,12 @@ const express = require('express');
 const app = express();
 const base64 = require('base-64');
 const bcrypt = require('bcrypt');
-const authorizationRoute = require('../middleware/password.js');
+const basicAuth = require('../middleware/basicAuth.js')
 
 const { User } = require('../models/index.js')
 const router = express.Router();
 
-router.post('/signin', signIn);
-// router.post('/signin', authorizationRoute, signIn);
+router.post('/signin', basicAuth, signIn);
 
 async function signIn(request, response) {
   try {
