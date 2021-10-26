@@ -2,7 +2,7 @@
 
 const express = require('express');
 const app = express();
-const signInRouter = require('./routes/sign-in.js');
+const signUpRouter = require('./routes/signup.js');
 const signUpRouter = require('./routes/signup.js');
 
 app.use(express.json());
